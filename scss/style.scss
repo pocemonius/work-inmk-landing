@@ -1,8 +1,116 @@
-@import "reset.scss";
+@import "reset";
 
 $roboto: 'Roboto', sans-serif;
+$colorBlack: #000;
+$colorOrange: #FFAD4F;
 
-h1{
+.inmk-page{
     font-family: $roboto;
+    .content-wrapper{
+        max-width: 1140px;
+        box-sizing: border-box;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin: 0 auto;
+        outline: 1px solid orange;
+    }
+    .title{
+        font-size: 28px;
+        color:$colorBlack;
+        line-height: normal;
+        font-weight: 700;
+    }
+    .sub-title{
+        font-size: 18px;
+        color:$colorBlack;
+        line-height: normal;
+        font-weight: 400;
+    }
+    .text{
+        font-size: 16px;
+        color:$colorBlack;
+        line-height: 26px;
+        font-weight: 300;
+    }
+    .link{
+        display: inline-block;
+        background-color: $colorOrange;
+        font-size: 18px;
+        font-weight: 500;
+        color: $colorBlack;
+        height: 50px;
+        line-height: 50px;
+        padding-left: 40px;
+        padding-right: 40px;
+        text-decoration: none;
+        cursor: pointer;
+        &:hover{
+            box-shadow: 0px 0px 10px rgba(0,0,0,.3);
+        }
+    }
+    header{
+        padding-top: 25px;
+        padding-bottom: 25px;
+        .content-wrapper{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .logo-wrapper{
+                display: flex;
+                align-items: center;
+                .logo-img{
+                    width: 200px;
+                    height: 60px;
+                    img{
+                        width: auto;
+                        height: auto;
+                        max-width: 100%;
+                        max-height: 100%;
+                    }
+                }
+                .logo-text{
+                    font-size: 18px;
+                    color:$colorBlack;
+                    line-height: normal;
+                    font-weight: 500;
+                    text-transform: uppercase;
+                    padding-left: 28px;
+                    margin-left: 28px;
+                    position: relative;
+                    &:before{
+                        content: "";
+                        display: block;
+                        width: 3px;
+                        height: 38px;
+                        background-color: #595959;
+                        position: absolute;
+                        left: 0px;
+                        top: 50%;
+                        margin-top: -19px;
+                    }
+                }
+            }
+            .contacts-wrapper{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-end;
+                a{
+                    display: block;
+                    font-size: 17px;
+                    color:$colorBlack;
+                    line-height: normal;
+                    font-weight: 400;
+                    text-decoration: none;
+                    &.mail{
+                        border-bottom: 1px solid $colorBlack;
+                        padding-top: 5px;
+                        &:hover{
+                            border-bottom: 1px solid transparent;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
-
